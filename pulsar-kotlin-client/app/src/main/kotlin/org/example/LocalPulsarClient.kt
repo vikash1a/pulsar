@@ -7,7 +7,7 @@ import org.apache.pulsar.client.api.Message
 import java.nio.charset.Charset
 
 class LocalPulsarClient{
-    fun test(){
+    fun produceAndConsume(){
         val client = PulsarClient.builder()
             .serviceUrl("pulsar://localhost:6650")
             .build()

@@ -31,6 +31,8 @@ dependencies {
     implementation(libs.guava)
 
     implementation("org.apache.pulsar:pulsar-client:3.2.2")
+    testImplementation("org.testcontainers:testcontainers:1.19.0") // Testcontainers core
+    testImplementation("org.testcontainers:pulsar:1.19.0") // Pulsar module for Testcontainers
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
