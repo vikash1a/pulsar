@@ -8,6 +8,7 @@
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     alias(libs.plugins.jvm)
+    id("com.diffplug.spotless") version "6.22.0" // Use the latest version
 
     // Apply the application plugin to add support for building a CLI application in Java.
     application
@@ -30,7 +31,7 @@ dependencies {
     // This dependency is used by the application.
     implementation(libs.guava)
 
-    implementation("org.apache.pulsar:pulsar-client:3.2.2")
+    implementation("org.apache.pulsar:pulsar-client:4.0.1")
     testImplementation("org.testcontainers:testcontainers:1.19.0") // Testcontainers core
     testImplementation("org.testcontainers:pulsar:1.19.0") // Pulsar module for Testcontainers
 }
